@@ -55,7 +55,7 @@ struct Current{
         
     }
     
-    func dateStringFromUnixTime(unixTime:Int)->String{
+    private func dateStringFromUnixTime(unixTime:Int)->String{
         let timeInSeconds = NSTimeInterval(unixTime)
         let weatherDate = NSDate(timeIntervalSince1970: timeInSeconds)
         
@@ -65,7 +65,7 @@ struct Current{
         return dateFormatter.stringFromDate(weatherDate)
     }
     
-    func weatherIconFromString(strIcon:String)-> UIImage {
+    private func weatherIconFromString(strIcon:String)-> UIImage {
         
         var imageName:String
         
